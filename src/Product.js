@@ -5,13 +5,13 @@ function Product() {
 	return (
 		<div className='product'>
 			<div className='product__info'>
-				<p>The Power of Habit: Why We Do What We Do in Life and Business</p>
+				<p>The Power of Habit</p>
 				<p className='product__price'>
 					<small>$</small>
 					<strong>18.29</strong>
 				</p>
 				<div className='product__rating'>
-					<p>⭐</p>
+					<p>🌟</p>
 				</div>
 			</div>
 			<img
