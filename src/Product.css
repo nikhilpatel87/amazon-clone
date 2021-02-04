@@ -25,6 +25,7 @@
 
 .product__rating {
 	display: flex;
+	margin-top: 5px;
 }
 
 .product__info {
