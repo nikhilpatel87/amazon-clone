@@ -15,7 +15,7 @@ function Product() {
 				</div>
 			</div>
 			<img
-				src='https://m.media-amazon.com/images/I/51Q4AwpPDkL._SY346_.jpg'
+				src='https://m.media-amazon.com/images/I/51Q4AwpPDkL.jpg'
 				alt='The Power of Habit'
 			/>
 			<button>Add to Basket</button>
