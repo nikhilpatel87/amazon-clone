@@ -4,13 +4,18 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout';
+import Login from './Login';
 
 function App() {
 	return (
 		//BEM
-		<div className='app'>
-			<Router>
+
+		<Router>
+			<div className='app'>
 				<Switch>
+					<Route path='/login'>
+						<Login />
+					</Route>
 					<Route path='/checkout'>
 						<Header />
 						<Checkout />
@@ -22,8 +27,8 @@ function App() {
 						<Home />
 					</Route>
 				</Switch>
-			</Router>
-		</div>
+			</div>
+		</Router>
 	);
 }
 
