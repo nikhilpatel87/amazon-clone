@@ -42,14 +42,16 @@ function Login() {
 					alt='Amazon Clone'
 				/>
 			</Link>
+
 			<div className='login__container'>
-				<h1>Sign-In</h1>
+				<h1>Sign-in</h1>
+
 				<form>
-					<h5>Email</h5>
+					<h5>E-mail</h5>
 					<input
 						type='text'
 						value={email}
-						onChanage={(e) => setEmail(e.target.value)}
+						onChange={(e) => setEmail(e.target.value)}
 					/>
 
 					<h5>Password</h5>
@@ -68,9 +70,9 @@ function Login() {
 				</form>
 
 				<p>
-					By singing-in, you agree to the AMAZON CLONE conditions of Use & Sale.
+					By signing-in you agree to the AMAZON CLONE Conditions of Use & Sale.
 					Please see our Privacy Notice, our Cookies Notice and our
-					Interest-Based Ads Notice. This is not just a cloned site of Amazon.
+					Interest-Based Ads Notice.
 				</p>
 
 				<button onClick={register} className='login__registerButton'>
