@@ -5,7 +5,7 @@ import { auth } from './firebase';
 
 function Login() {
 	const history = useHistory();
-	const [email, setEmail] = useState('email');
+	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
 	const signIn = (e) => {
@@ -25,12 +25,14 @@ function Login() {
 		auth
 			.createUserWithEmailAndPassword(email, password)
 			.then((auth) => {
+				// it successfully created a new user with email and password
 				if (auth) {
 					history.push('/');
 				}
 			})
 			.catch((error) => alert(error.message));
 	};
+
 	return (
 		<div className='login'>
 			<Link to='/'>
