@@ -10,17 +10,16 @@ function Subtotal() {
 	const [{ basket, user }, dispatch] = useStateValue();
 
 	return (
-		<div className='subtotal'>
+		<div className="subtotal">
 			<CurrencyFormat
 				renderText={(value) => (
 					<>
-						s
 						<p>
 							Subtotal ({basket?.length} Items):
 							<strong>{value}</strong>
 						</p>
-						<small className='subtotal__gift'>
-							<input type='checkbox' /> This order contains a gift
+						<small className="subtotal__gift">
+							<input type="checkbox" /> This order contains a gift
 						</small>
 					</>
 				)}

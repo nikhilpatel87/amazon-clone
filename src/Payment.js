@@ -34,6 +34,8 @@ function Payment() {
 		getClientSecret();
 	}, [basket]);
 
+	console.log('The SECRET IS', clientSecret);
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setProcessing(true);
@@ -61,18 +63,18 @@ function Payment() {
 	};
 
 	return (
-		<div className='payment'>
-			<div className='payment__container'>
+		<div className="payment">
+			<div className="payment__container">
 				<h1>
-					Checkout (<Link to='/checkout'>{basket?.length} Items</Link>)
+					Checkout (<Link to="/checkout">{basket?.length} Items</Link>)
 				</h1>
 
 				{/* Delivery Address */}
-				<div className='payment__section'>
-					<div className='payment__title'>
+				<div className="payment__section">
+					<div className="payment__title">
 						<h3>Delivery Address</h3>
 					</div>
-					<div className='payment__address'>
+					<div className="payment__address">
 						<p>{user?.email}</p>
 						<p>123 Fake Lane</p>
 						<p>New York, NY 54321</p>
@@ -80,12 +82,12 @@ function Payment() {
 				</div>
 
 				{/* Review Basket Items */}
-				<div className='payment__section'>
-					<div className='payment__title'>
+				<div className="payment__section">
+					<div className="payment__title">
 						<h3>Review Items and Delivery</h3>
 					</div>
 
-					<div className='payment__items'>
+					<div className="payment__items">
 						{basket.map((item) => (
 							<CheckoutProduct
 								id={item.id}
@@ -99,17 +101,17 @@ function Payment() {
 				</div>
 
 				{/* Payment Method */}
-				<div className='payment__section'>
-					<div className='payment__title'>
+				<div className="payment__section">
+					<div className="payment__title">
 						<h3>Payment Method</h3>
 					</div>
-					<div className='payment__details'>
+					<div className="payment__details">
 						{/* Stripe Payment */}
 
 						<form onSubmit={handleSubmit}>
 							<CardElement onChange={handleChange} />
 
-							<div className='payment__priceContainer'>
+							<div className="payment__priceContainer">
 								<CurrencyFormat
 									renderText={(value) => (
 										<>
