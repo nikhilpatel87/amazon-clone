@@ -14,6 +14,7 @@ function Subtotal() {
 			<CurrencyFormat
 				renderText={(value) => (
 					<>
+						s
 						<p>
 							Subtotal ({basket?.length} Items):
 							<strong>{value}</strong>
